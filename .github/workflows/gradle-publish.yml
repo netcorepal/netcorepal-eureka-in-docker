@@ -33,6 +33,6 @@ jobs:
 
     - name: build
       run: |
-       git clone https://github.com/Netflix/eureka.git
+       git clone --branch v1.10.17 https://github.com/Netflix/eureka.git
        cd eureka
        ./gradlew clean build
