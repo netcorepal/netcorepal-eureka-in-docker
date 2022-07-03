@@ -37,7 +37,9 @@ jobs:
        git clone --branch v1.9.26 https://github.com/Netflix/eureka.git
        cd eureka
        ./gradlew clean build
-       cd ../
+       cd eureka-server/build/libs
+       ls
+       cd ../../../../
     - name: Docker Login
       # You may pin to the exact commit or the version.
       # uses: docker/login-action@49ed152c8eca782a232dede0303416e8f356c37b
