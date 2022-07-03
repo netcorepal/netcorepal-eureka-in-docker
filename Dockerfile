@@ -1,2 +1,4 @@
+
+FROM docker pull ghcr.io/netcorepal/netcorepal-eureka-in-docker:build as build
 FROM tomcat:9.0.64-jdk8
-COPY eureka-server-1.10.18-SNAPSHOT.war /usr/local/tomcat/webapps/eureka.war
+COPY --from=build /netcorepal/eureka/eureka-server/build/libs/eureka-server-1.9.27-SNAPSHOT.war /app/publish /usr/local/tomcat/webapps/eureka.war
